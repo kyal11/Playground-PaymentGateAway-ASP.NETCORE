@@ -1,1 +1,12 @@
-<Solution />
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".env" />
+    <File Path=".gitignore" />
+    <File Path="Docker-Compose.yaml" />
+  </Folder>
+  <Project Path="Payment.Infrastructure/Payment.Infrastructure.csproj" Id="bf2df9b0-ae93-49bd-8af0-d15a985747b4" />
+  <Project Path="Payment.Api/Payment.Api.csproj" />
+  <Project Path="Payment.Application/Payment.Application.csproj" />
+  <Project Path="Payment.Domain/Payment.Domain.csproj" />
+  <Project Path="Payment.Shared/Payment.Shared.csproj" />
+</Solution>

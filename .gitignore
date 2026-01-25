@@ -4,6 +4,7 @@ out/
 publish/
 .vs/
 *.user
+.env
 
 Payment.Api/appsettings.Development.json
 Payment.Api/appsettings.Local.json
