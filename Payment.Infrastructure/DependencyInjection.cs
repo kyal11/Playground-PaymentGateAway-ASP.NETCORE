@@ -2,7 +2,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Payment.Domain.Interfaces;
 using Payment.Infrastructure.Persistence;
+using Payment.Infrastructure.Persistence.Repositories;
 
 namespace Payment.Infrastructure;
 
@@ -16,6 +18,7 @@ public static class DependencyInjection
                 ).LogTo(Console.WriteLine, LogLevel.Information)
         );
 
+        services.AddScoped<IPaymentRepository, PaymentRepository>();
         return services;
     }
 }
