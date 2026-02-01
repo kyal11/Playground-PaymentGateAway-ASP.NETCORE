@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Payment.Application;
 using Payment.Infrastructure;
 using Payment.Infrastructure.Persistence;
 
@@ -8,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplicationServices();
 
 builder.Services.AddOpenApi();
 
@@ -17,7 +19,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
@@ -35,8 +37,8 @@ using (var scope = app.Services.CreateScope())
         if (context.Database.CanConnect() && app.Environment.IsDevelopment())
         {
             logger.LogInformation("Database terhubung dengan sukses");
-            context.Database.Migrate();
-            logger.LogInformation("Migrate Berjalan");
+            //context.Database.Migrate();
+            //logger.LogInformation("Migrate Berjalan");
         }
         else
         {
